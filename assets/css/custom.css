@@ -1,0 +1,18 @@
+.collapsible {
+    cursor: pointer;
+}
+.active, .collapsible:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+.content-collapse {
+    padding: 1em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* background-color: #f1f1f1; */
+}
+
+p.describe{
+    text-indent: 10%;
+    text-align: justify;
+}
