@@ -511,11 +511,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; 2022 | Ricky</p>
-			<?php
-$current_year = date('Y');
-echo "Tahun saat ini adalah " . $current_year;
-?>
+			<p class="copyright">&copy; <span id="tahun"></span> | Ricky</p>
 		</footer>
 
 	</div>
@@ -543,6 +539,13 @@ echo "Tahun saat ini adalah " . $current_year;
 			}
 		}
 		type();
+
+		// Ambil tanggal saat ini
+		var d = new Date();
+		var tahun = d.getFullYear();
+
+		// Tampilkan tahun di halaman web
+		document.getElementById("tahun").innerHTML = tahun;
 	</script>
 </body>
 
