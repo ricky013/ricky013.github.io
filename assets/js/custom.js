@@ -11,16 +11,16 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
-  coll[i].addEventListener("mouseover", function() {
-    var content = this.lastElementChild;
-    if (!this.classList.contains("active") && content.style.maxHeight !== content.scrollHeight + "px") {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-  coll[i].addEventListener("mouseout", function() {
-    var content = this.lastElementChild;
-    if (!this.classList.contains("active")) {
-      content.style.maxHeight = null;
-    }
-  });
+  // coll[i].addEventListener("mouseover", function() {
+  //   var content = this.lastElementChild;
+  //   if (!this.classList.contains("active") && content.style.maxHeight !== content.scrollHeight + "px") {
+  //     content.style.maxHeight = content.scrollHeight + "px";
+  //   }
+  // });
+  // coll[i].addEventListener("mouseout", function() {
+  //   var content = this.lastElementChild;
+  //   if (!this.classList.contains("active")) {
+  //     content.style.maxHeight = null;
+  //   }
+  // });
 }

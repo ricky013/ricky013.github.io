@@ -1,18 +1,44 @@
+:root {
+    --neumorphism: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.7);
+    --neumorphism-hover: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.7);
+    --neumorphism-inner: inset 8px 8px 16px rgba(0, 0, 0, 0.2), inset -8px -8px 16px rgba(255, 255, 255, 0.7);
+    --bg-neumorphism: rgba(19, 21, 25, 0.5);
+}
+
 .collapsible {
     cursor: pointer;
+    box-shadow: var(--neumorphism);
+    border-radius: 0.5rem;
 }
-.active, .collapsible:hover {
+
+.collapsible:hover {
     background-color: rgba(255, 255, 255, 0.075);
-  }
+    box-shadow: var(--neumorphism-hover);
+}
+
+.collapsible.active {
+    box-shadow: var(--neumorphism-inner)
+}
+
 .content-collapse {
-    padding: 1em;
+    padding-right: 1em;
     max-height: 0;
     overflow: hidden;
     transition: max-height 1.5s ease-in-out;
     /* background-color: #f1f1f1; */
 }
 
-p.describe{
+p.describe {
     text-indent: 10%;
     text-align: justify;
+}
+
+#project ul {
+    display: grid;
+    gap: 1.5rem;
+
+    & li {
+
+        transition: all 0.2s ease-in-out;
+    }
 }
